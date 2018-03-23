@@ -1,0 +1,6 @@
+library(rvest)
+read_html("https://news.google.com/news/headlines/section/topic/WORLD?ned=zh-tw_tw&hl=zh-TW&gl=TW")
+doc <- read_html("https://news.google.com/news/headlines/section/topic/WORLD?ned=zh-tw_tw&hl=zh-TW&gl=TW")
+doc %>% html_nodes(".kWyHVd .ME7ew")
+doc %>% html_nodes(".kWyHVd .ME7ew") %>% html_attr("href")
+doc %>% html_nodes(".kWyHVd .ME7ew") %>% html_text() 
