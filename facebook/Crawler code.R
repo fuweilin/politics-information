@@ -35,11 +35,7 @@ while( !is.null(url) )
   {
     date = data[[id]]$created_time
     year = strsplit(date, '-')[[1]][1]
-    
     month = strsplit(date, '-')[[1]][2]
-    if (year <= 2015 & month){
-     next() 
-    }
     month = paste0(year,'_',month)    
     if( currentM == month )
     {
